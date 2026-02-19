@@ -7,9 +7,9 @@ void main() {
 
     test('should be created with valid values', () {
       final pet = PetEntity(
-        hunger: 0.5,
-        happiness: 0.5,
-        energy: 0.5,
+        hunger: 50.0,
+        happiness: 50.0,
+        energy: 50.0,
         lastUpdate: now,
         fitnessLevel: 0.5,
         intelligenceLevel: 0.5,
@@ -24,9 +24,9 @@ void main() {
     test('should throw ArgumentError if fitnessLevel is invalid', () {
       expect(
         () => PetEntity(
-          hunger: 0.5,
-          happiness: 0.5,
-          energy: 0.5,
+          hunger: 50.0,
+          happiness: 50.0,
+          energy: 50.0,
           lastUpdate: now,
           fitnessLevel: 1.1,
           intelligenceLevel: 0.5,
@@ -36,9 +36,9 @@ void main() {
       );
       expect(
         () => PetEntity(
-          hunger: 0.5,
-          happiness: 0.5,
-          energy: 0.5,
+          hunger: 50.0,
+          happiness: 50.0,
+          energy: 50.0,
           lastUpdate: now,
           fitnessLevel: -0.1,
           intelligenceLevel: 0.5,
@@ -51,9 +51,9 @@ void main() {
     test('should throw ArgumentError if intelligenceLevel is invalid', () {
       expect(
         () => PetEntity(
-          hunger: 0.5,
-          happiness: 0.5,
-          energy: 0.5,
+          hunger: 50.0,
+          happiness: 50.0,
+          energy: 50.0,
           lastUpdate: now,
           fitnessLevel: 0.5,
           intelligenceLevel: 1.1,
@@ -63,9 +63,9 @@ void main() {
       );
       expect(
          () => PetEntity(
-          hunger: 0.5,
-          happiness: 0.5,
-          energy: 0.5,
+          hunger: 50.0,
+          happiness: 50.0,
+          energy: 50.0,
           lastUpdate: now,
           fitnessLevel: 0.5,
           intelligenceLevel: -0.1,
@@ -78,9 +78,9 @@ void main() {
     test('should throw ArgumentError if energyReserves is invalid', () {
       expect(
         () => PetEntity(
-          hunger: 0.5,
-          happiness: 0.5,
-          energy: 0.5,
+          hunger: 50.0,
+          happiness: 50.0,
+          energy: 50.0,
           lastUpdate: now,
           fitnessLevel: 0.5,
           intelligenceLevel: 0.5,
@@ -90,9 +90,9 @@ void main() {
       );
       expect(
          () => PetEntity(
-          hunger: 0.5,
-          happiness: 0.5,
-          energy: 0.5,
+          hunger: 50.0,
+          happiness: 50.0,
+          energy: 50.0,
           lastUpdate: now,
           fitnessLevel: 0.5,
           intelligenceLevel: 0.5,
@@ -104,9 +104,9 @@ void main() {
 
     test('copyWith should return a new instance with updated values', () {
       final pet = PetEntity(
-        hunger: 0.5,
-        happiness: 0.5,
-        energy: 0.5,
+        hunger: 50.0,
+        happiness: 50.0,
+        energy: 50.0,
         lastUpdate: now,
         fitnessLevel: 0.5,
         intelligenceLevel: 0.5,
@@ -121,7 +121,7 @@ void main() {
       expect(updatedPet.fitnessLevel, 0.8);
       expect(updatedPet.intelligenceLevel, 0.9);
       expect(updatedPet.energyReserves, 0.5); // Unchanged
-      expect(updatedPet.hunger, 0.5); // Unchanged
+      expect(updatedPet.hunger, 50.0); // Unchanged
     });
   });
 }
